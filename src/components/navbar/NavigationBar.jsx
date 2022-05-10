@@ -7,7 +7,9 @@ export default function NavigationBar() {
     <Navbar>
       <TitleContainer>
         <Icon src={icon} />
-        <Title>Data Analysis for COVID</Title>
+        <Title>
+          <strong>COVID</strong> ANALYSIS
+        </Title>
       </TitleContainer>
     </Navbar>
   );

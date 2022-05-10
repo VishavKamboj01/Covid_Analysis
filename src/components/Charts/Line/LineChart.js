@@ -1,6 +1,5 @@
 import React from "react";
-import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS } from "chart.js/auto";
+import { Line } from "react-chartjs-2";
 import {
   ChartContainer,
   ChartSection,
@@ -12,31 +11,27 @@ import {
   Mark,
 } from "../styles";
 
-export default function BarChart() {
-  const barChartData = {
-    labels: ["October", "November", "December"],
+export default function LineChart() {
+  const data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
       {
-        data: [8137119, 9431691, 10266674],
-        label: "Infected People",
-        borderColor: "#3333ff",
-        backgroundColor: "rgba(0, 0, 255, 0.5)",
-        fill: true,
-      },
-      {
-        data: [1216410, 1371390, 1477380],
-        label: "Deaths People",
-        borderColor: "#ff3333",
-        backgroundColor: "rgba(255, 0, 0, 0.5)",
-        fill: true,
+        label: "My First Dataset",
+        data: [65, 59, 80, 81, 56, 55, 40],
+        fill: false,
+        borderColor: "rgb(75, 192, 192)",
+        tension: 0.1,
       },
     ],
   };
 
   return (
-    <ChartSection id="BarSection">
+    <ChartSection>
+      <ChartContainer>
+        <Line type="line" data={data} />
+      </ChartContainer>
       <DataContainer>
-        <Title>How has COVID-19 impacted Americans?</Title>
+        <Title>Section Title</Title>
         <PointsContainer>
           <Point>
             <Mark />
@@ -84,26 +79,6 @@ export default function BarChart() {
           </Point>
         </PointsContainer>
       </DataContainer>
-      <ChartContainer>
-        <Bar
-          type="bar"
-          width={100}
-          height={400}
-          options={{
-            title: {
-              display: true,
-              text: "COVID-19 Cases of Last 3 Months",
-              fontSize: 15,
-            },
-            legend: {
-              display: true, //Is the legend shown?
-              position: "top", //Position of the legend.
-            },
-            maintainAspectRatio: false,
-          }}
-          data={barChartData}
-        />
-      </ChartContainer>
     </ChartSection>
   );
 }

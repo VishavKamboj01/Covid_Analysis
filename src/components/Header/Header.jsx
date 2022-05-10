@@ -17,12 +17,13 @@ import {
 } from "./styles";
 
 import virus from "../../images/virus.png";
+import Link from "react-scroll/modules/components/Link";
 
 export default function Header() {
   return (
     <Container>
       <HeadContainer>
-        <Title>Some Title</Title>
+        <Title>Data Analysis</Title>
         <Info>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
           quae vel aut, accus amus optio eius nemo atque, qui busdam porro iusto
@@ -30,7 +31,9 @@ export default function Header() {
           Dicta, necessi tatibus voluptate. Ad pariatur eum qui itaque dolores
           asperiores.
         </Info>
-        <ExploreButton>START EXPLORING</ExploreButton>
+        <Link to="BarSection" smooth={true}>
+          <ExploreButton>START EXPLORING</ExploreButton>
+        </Link>
       </HeadContainer>
 
       <ImageContainer>

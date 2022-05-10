@@ -2,24 +2,21 @@ import styled from "@emotion/styled";
 
 export const Navbar = styled.div`
   width: 100%;
-  background-color: white;
-  border-bottom-style: solid;
-  border-bottom-color: grey;
-  border-bottom-width: 1px;
+  background-color: #000;
   top: 0;
-  position: absolute;
+  position: fixed;
   z-index: 1;
 `;
 
 export const TitleContainer = styled.div`
-  padding: 20px;
+  padding: 10px;
   height: 100%;
   display: flex;
   align-items: center;
 `;
 
 export const Title = styled.p`
-  color: black;
+  color: #2494a1;
   margin: 0px;
   font-size: 30px;
   display: inline;

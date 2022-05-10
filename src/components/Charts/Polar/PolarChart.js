@@ -1,6 +1,5 @@
 import React from "react";
-import { Bar } from "react-chartjs-2";
-import { Chart as ChartJS } from "chart.js/auto";
+import { PolarArea } from "react-chartjs-2";
 import {
   ChartContainer,
   ChartSection,
@@ -12,31 +11,28 @@ import {
   Mark,
 } from "../styles";
 
-export default function BarChart() {
-  const barChartData = {
-    labels: ["October", "November", "December"],
+export default function PolarChart() {
+  const data = {
+    labels: ["Red", "Green", "Yellow", "Grey", "Blue"],
     datasets: [
       {
-        data: [8137119, 9431691, 10266674],
-        label: "Infected People",
-        borderColor: "#3333ff",
-        backgroundColor: "rgba(0, 0, 255, 0.5)",
-        fill: true,
-      },
-      {
-        data: [1216410, 1371390, 1477380],
-        label: "Deaths People",
-        borderColor: "#ff3333",
-        backgroundColor: "rgba(255, 0, 0, 0.5)",
-        fill: true,
+        label: "My First Dataset",
+        data: [11, 16, 7, 3, 14],
+        backgroundColor: [
+          "rgb(255, 99, 132)",
+          "rgb(75, 192, 192)",
+          "rgb(255, 205, 86)",
+          "rgb(201, 203, 207)",
+          "rgb(54, 162, 235)",
+        ],
       },
     ],
   };
 
   return (
-    <ChartSection id="BarSection">
+    <ChartSection>
       <DataContainer>
-        <Title>How has COVID-19 impacted Americans?</Title>
+        <Title>Section Title</Title>
         <PointsContainer>
           <Point>
             <Mark />
@@ -85,24 +81,7 @@ export default function BarChart() {
         </PointsContainer>
       </DataContainer>
       <ChartContainer>
-        <Bar
-          type="bar"
-          width={100}
-          height={400}
-          options={{
-            title: {
-              display: true,
-              text: "COVID-19 Cases of Last 3 Months",
-              fontSize: 15,
-            },
-            legend: {
-              display: true, //Is the legend shown?
-              position: "top", //Position of the legend.
-            },
-            maintainAspectRatio: false,
-          }}
-          data={barChartData}
-        />
+        <PolarArea type="polarArea" data={data} style={{ width: "30%" }} />
       </ChartContainer>
     </ChartSection>
   );
