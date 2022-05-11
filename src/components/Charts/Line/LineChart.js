@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Line } from "react-chartjs-2";
 import {
   ChartContainer,
@@ -9,9 +9,15 @@ import {
   Text,
   Title,
   Mark,
+  ToggleContainer,
+  ToggleSwitch,
+  ToggleSwitch2,
 } from "../styles";
 
 export default function LineChart() {
+  const [toggle, setToggle] = useState(false);
+  const [firstRender, setFirstRender] = useState(true);
+
   const data = {
     labels: ["January", "February", "March", "April", "May", "June", "July"],
     datasets: [
@@ -25,8 +31,19 @@ export default function LineChart() {
     ],
   };
 
+  const handleToggleOn = () => {
+    setToggle(true);
+    console.log("Change the chart");
+  };
+
+  const handleToggleOff = () => {
+    setToggle(false);
+    setFirstRender(false);
+    console.log("Revert the chart");
+  };
+
   return (
-    <ChartSection>
+    <ChartSection id="LineSection">
       <ChartContainer>
         <Line type="line" data={data} />
       </ChartContainer>
@@ -79,6 +96,13 @@ export default function LineChart() {
           </Point>
         </PointsContainer>
       </DataContainer>
+      <ToggleContainer>
+        {toggle ? (
+          <ToggleSwitch animate onClick={handleToggleOff} />
+        ) : (
+          <ToggleSwitch2 animate={!firstRender} onClick={handleToggleOn} />
+        )}
+      </ToggleContainer>
     </ChartSection>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
 import {
@@ -10,9 +10,15 @@ import {
   Text,
   Title,
   Mark,
+  ToggleContainer,
+  ToggleSwitch,
+  ToggleSwitch2,
 } from "../styles";
 
 export default function BarChart() {
+  const [toggle, setToggle] = useState(false);
+  const [firstRender, setFirstRender] = useState(true);
+
   const barChartData = {
     labels: ["October", "November", "December"],
     datasets: [
@@ -31,6 +37,17 @@ export default function BarChart() {
         fill: true,
       },
     ],
+  };
+
+  const handleToggleOn = () => {
+    setToggle(true);
+    console.log("Change the chart");
+  };
+
+  const handleToggleOff = () => {
+    setToggle(false);
+    setFirstRender(false);
+    console.log("Revert the chart");
   };
 
   return (
@@ -84,6 +101,7 @@ export default function BarChart() {
           </Point>
         </PointsContainer>
       </DataContainer>
+      <div></div>
       <ChartContainer>
         <Bar
           type="bar"
@@ -104,6 +122,14 @@ export default function BarChart() {
           data={barChartData}
         />
       </ChartContainer>
+
+      <ToggleContainer>
+        {toggle ? (
+          <ToggleSwitch animate onClick={handleToggleOff} />
+        ) : (
+          <ToggleSwitch2 animate={!firstRender} onClick={handleToggleOn} />
+        )}
+      </ToggleContainer>
     </ChartSection>
   );
 }

@@ -30,7 +30,7 @@ export default function PolarChart() {
   };
 
   return (
-    <ChartSection>
+    <ChartSection id="PolarSection">
       <DataContainer>
         <Title>Section Title</Title>
         <PointsContainer>

@@ -175,6 +175,7 @@ export const HeadContainer = styled.div`
   justify-content: center;
   padding: 40px;
   margin-left: 100px;
+  align-items: flex-start;
 `;
 
 export const Title = styled.p`
@@ -183,6 +184,7 @@ export const Title = styled.p`
   padding: 0;
   opacity: 0.8;
   color: white;
+
   /* background-image: linear-gradient(90deg, #2494a1 0%, #42d1e0 100%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -192,10 +194,9 @@ export const Title = styled.p`
 export const Info = styled.p`
   color: #b9c3cf;
   font-size: 1.5rem;
-  padding: 10px;
   opacity: 0.8;
-  margin-bottom: 80px;
-  margin-top: 50px;
+  margin-bottom: 100px;
+  margin-top: 40px;
 `;
 
 export const ExploreButton = styled.button`
@@ -215,7 +216,7 @@ export const ExploreButton = styled.button`
   border: 0;
   cursor: pointer;
   font-size: 1.1rem;
-
+  margin-top: 20px;
   animation-name: ${heartBeat};
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -223,24 +224,8 @@ export const ExploreButton = styled.button`
   position: relative;
   z-index: 20;
 
-  /* :hover {
-    text-decoration: none;
-    color: white;
-    ::after {
-      height: 0;
-    }
+  :hover {
+    box-shadow: 0 0 20px #b9c3cf;
+    animation-play-state: paused;
   }
-
-  ::after {
-    content: "";
-    width: 272px;
-    height: 42px;
-    right: 4px;
-    z-index: -1;
-    border-radius: 18px;
-    top: 4px;
-    position: absolute;
-    background: white;
-    transition: 0.3s ease;
-  } */
 `;
