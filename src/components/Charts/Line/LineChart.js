@@ -44,10 +44,10 @@ export default function LineChart() {
 
   return (
     <ChartSection id="LineSection">
-      <ChartContainer>
+      <ChartContainer data-aos="zoom-in">
         <Line type="line" data={data} />
       </ChartContainer>
-      <DataContainer>
+      <DataContainer data-aos="fade-left">
         <Title>Section Title</Title>
         <PointsContainer>
           <Point>

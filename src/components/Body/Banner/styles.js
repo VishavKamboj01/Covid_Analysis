@@ -1,4 +1,17 @@
 import styled from "@emotion/styled";
+import { keyframes } from "@emotion/react";
+
+const bubbleDownAndUp = keyframes`
+  0%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(0.95);
+  }
+  100%{
+    transform:scale(1);
+  }
+`;
 
 export const BaseContainer = styled.div`
   width: 100%;
@@ -56,6 +69,7 @@ export const Section = styled.div`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
   clip-path: polygon(6% 10%, 100% 0, 94% 90%, 0% 100%);
   background: linear-gradient(
     90deg,
@@ -83,6 +97,27 @@ export const Section = styled.div`
     transition: 0.3s ease;
     clip-path: polygon(6% 10%, 100% 0, 94% 90%, 0% 100%);
   }
+`;
+
+export const SelectedSection = styled.div`
+  width: 300px;
+  height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  clip-path: polygon(6% 10%, 100% 0, 94% 90%, 0% 100%);
+  animation-name: ${(props) => (props.animate ? bubbleDownAndUp : "")};
+  animation-duration: 0.7s;
+  transition: ease;
+
+  background: linear-gradient(
+    90deg,
+    rgba(13, 100, 90, 1) 15%,
+    rgba(0, 134, 157, 1) 45%,
+    rgba(4, 180, 227, 1) 100%
+  );
 `;
 
 export const Text = styled.p`

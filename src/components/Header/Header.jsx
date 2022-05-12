@@ -1,5 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
-import background from "../../images/background.jpg";
+import React from "react";
 import {
   Container,
   ExploreButton,

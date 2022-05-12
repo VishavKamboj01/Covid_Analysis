@@ -48,7 +48,7 @@ export default function PolarChart() {
 
   return (
     <ChartSection id="PolarSection">
-      <DataContainer>
+      <DataContainer data-aos="fade-right">
         <Title>Section Title</Title>
         <PointsContainer>
           <Point>
@@ -97,7 +97,7 @@ export default function PolarChart() {
           </Point>
         </PointsContainer>
       </DataContainer>
-      <ChartContainer>
+      <ChartContainer data-aos="fade-left">
         <PolarArea type="polarArea" data={data} />
       </ChartContainer>
       <ToggleContainer>

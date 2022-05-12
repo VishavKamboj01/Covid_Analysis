@@ -4,7 +4,7 @@ import { BaseContainer, Card, Title, Text } from "./styles";
 export default function About() {
   return (
     <BaseContainer id="AboutDataset">
-      <Card>
+      <Card data-aos="fade-up">
         <Title>About Dataset</Title>
         <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, ea

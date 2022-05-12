@@ -58,7 +58,7 @@ export default function ScatterChart() {
 
   return (
     <ChartSection id="BarSection">
-      <ChartContainer>
+      <ChartContainer data-aos="zoom-in-right">
         <Scatter
           type="scatter"
           options={{
@@ -72,7 +72,7 @@ export default function ScatterChart() {
           data={data}
         />
       </ChartContainer>
-      <DataContainer>
+      <DataContainer data-aos="zoom-in-left">
         <Title>How has COVID-19 impacted Americans?</Title>
         <PointsContainer>
           <Point>

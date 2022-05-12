@@ -52,7 +52,7 @@ export default function BarChart() {
 
   return (
     <ChartSection id="BarSection">
-      <DataContainer>
+      <DataContainer data-aos="fade-right">
         <Title>How has COVID-19 impacted Americans?</Title>
         <PointsContainer>
           <Point>
@@ -102,7 +102,7 @@ export default function BarChart() {
         </PointsContainer>
       </DataContainer>
       <div></div>
-      <ChartContainer>
+      <ChartContainer data-aos="fade-up">
         <Bar
           type="bar"
           width={100}
