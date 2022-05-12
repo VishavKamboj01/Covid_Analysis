@@ -13,6 +13,18 @@ const heartBeat = keyframes`
   }
 `;
 
+const appearFromBottom = keyframes`
+  0%{
+    opacity:0;
+    transform:translateX(-100px);
+  }
+
+  100%{
+    opacity:1;
+    transform:translateX(0);
+  }
+`;
+
 const appearFromRightVirus1 = keyframes`
   0%{
     opacity:0;
@@ -202,8 +214,7 @@ export const Info = styled.p`
 export const ExploreButton = styled.button`
   width: 280px;
   height: 50px;
-  border-radius: 20px;
-  box-shadow: 0 0 3px gray;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
   background: linear-gradient(
     45deg,
     rgba(13, 100, 90, 1) 15%,
@@ -217,6 +228,7 @@ export const ExploreButton = styled.button`
   cursor: pointer;
   font-size: 1.1rem;
   margin-top: 20px;
+
   animation-name: ${heartBeat};
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -225,7 +237,6 @@ export const ExploreButton = styled.button`
   z-index: 20;
 
   :hover {
-    box-shadow: 0 0 20px #b9c3cf;
     animation-play-state: paused;
   }
 `;

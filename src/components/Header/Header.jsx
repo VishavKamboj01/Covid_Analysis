@@ -31,7 +31,7 @@ export default function Header() {
           Dicta, necessi tatibus voluptate. Ad pariatur eum qui itaque dolores
           asperiores.
         </Info>
-        <Link to="BarSection" smooth={true}>
+        <Link to="AboutDataset" smooth={true}>
           <ExploreButton>START EXPLORING</ExploreButton>
         </Link>
       </HeadContainer>

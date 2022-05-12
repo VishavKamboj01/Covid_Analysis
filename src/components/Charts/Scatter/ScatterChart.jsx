@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { PolarArea } from "react-chartjs-2";
+import { Scatter } from "react-chartjs-2";
+import { Chart as ChartJS } from "chart.js/auto";
 import {
   ChartContainer,
   ChartSection,
@@ -13,24 +14,33 @@ import {
   ToggleSwitch,
   ToggleSwitch2,
 } from "../styles";
-
-export default function PolarChart() {
+export default function ScatterChart() {
   const [toggle, setToggle] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
 
   const data = {
-    labels: ["Red", "Green", "Yellow", "Grey", "Blue"],
     datasets: [
       {
-        label: "My First Dataset",
-        data: [11, 16, 7, 3, 14],
-        backgroundColor: [
-          "rgb(255, 99, 132)",
-          "rgb(75, 192, 192)",
-          "rgb(255, 205, 86)",
-          "rgb(201, 203, 207)",
-          "rgb(54, 162, 235)",
+        label: "Scatter Dataset",
+        data: [
+          {
+            x: -10,
+            y: 0,
+          },
+          {
+            x: 0,
+            y: 10,
+          },
+          {
+            x: 10,
+            y: 5,
+          },
+          {
+            x: 0.5,
+            y: 5.5,
+          },
         ],
+        backgroundColor: "rgb(255, 99, 132)",
       },
     ],
   };
@@ -47,9 +57,23 @@ export default function PolarChart() {
   };
 
   return (
-    <ChartSection id="PolarSection">
+    <ChartSection id="BarSection">
+      <ChartContainer>
+        <Scatter
+          type="scatter"
+          options={{
+            scales: {
+              x: {
+                type: "linear",
+                position: "bottom",
+              },
+            },
+          }}
+          data={data}
+        />
+      </ChartContainer>
       <DataContainer>
-        <Title>Section Title</Title>
+        <Title>How has COVID-19 impacted Americans?</Title>
         <PointsContainer>
           <Point>
             <Mark />
@@ -97,9 +121,6 @@ export default function PolarChart() {
           </Point>
         </PointsContainer>
       </DataContainer>
-      <ChartContainer>
-        <PolarArea type="polarArea" data={data} />
-      </ChartContainer>
       <ToggleContainer>
         {toggle ? (
           <ToggleSwitch animate onClick={handleToggleOff} />
