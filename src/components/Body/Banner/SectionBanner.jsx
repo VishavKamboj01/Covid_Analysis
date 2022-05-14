@@ -16,7 +16,7 @@ export default function SectionBanner({ onSectionChange }) {
   const [selectedSection, setSelectedSection] = useState("Section1");
 
   return (
-    <BaseContainer data-aos="zoom-in-up">
+    <BaseContainer data-aos="zoom-in-up" id="Sections">
       <SectionsContainer>
         <Icon src={virus} />
         <Title>Sections</Title>

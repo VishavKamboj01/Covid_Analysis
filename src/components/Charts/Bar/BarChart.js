@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto";
+import { barChartBeforeData, barChartAfterData } from "./Data";
 import {
   ChartContainer,
   ChartSection,
@@ -18,36 +19,17 @@ import {
 export default function BarChart() {
   const [toggle, setToggle] = useState(false);
   const [firstRender, setFirstRender] = useState(true);
-
-  const barChartData = {
-    labels: ["October", "November", "December"],
-    datasets: [
-      {
-        data: [8137119, 9431691, 10266674],
-        label: "Infected People",
-        borderColor: "#3333ff",
-        backgroundColor: "rgba(0, 0, 255, 0.5)",
-        fill: true,
-      },
-      {
-        data: [1216410, 1371390, 1477380],
-        label: "Deaths People",
-        borderColor: "#ff3333",
-        backgroundColor: "rgba(255, 0, 0, 0.5)",
-        fill: true,
-      },
-    ],
-  };
+  const [currentData, setCurrentData] = useState(barChartBeforeData);
 
   const handleToggleOn = () => {
     setToggle(true);
-    console.log("Change the chart");
+    setCurrentData(barChartAfterData);
   };
 
   const handleToggleOff = () => {
     setToggle(false);
     setFirstRender(false);
-    console.log("Revert the chart");
+    setCurrentData(barChartBeforeData);
   };
 
   return (
@@ -119,7 +101,7 @@ export default function BarChart() {
             },
             maintainAspectRatio: false,
           }}
-          data={barChartData}
+          data={currentData}
         />
       </ChartContainer>
 
