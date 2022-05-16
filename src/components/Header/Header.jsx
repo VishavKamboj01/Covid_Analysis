@@ -24,11 +24,14 @@ export default function Header() {
       <HeadContainer>
         <Title>Data Analysis</Title>
         <Info>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-          quae vel aut, accus amus optio eius nemo atque, qui busdam porro iusto
-          dolo ribus conse ctetur, digni ssimos illum tenetur culpa officia.
-          Dicta, necessi tatibus voluptate. Ad pariatur eum qui itaque dolores
-          asperiores.
+          COVID-19 research dataset is created to predict COVID-19 risk
+          infection and risk mortality rate, this data was gathered by a
+          software company located in London. This dataset consists of 1023426
+          rows and 60 columns having geographical region, health diseases,
+          factors used to reduce the spread of COVID-19. The initial World
+          Health Organisation estimates put the chances of dying from COVID-19
+          between 4% and 7%. We now know that figure is significantly lower with
+          current estimates putting it between 0.3% and 0.6%.
         </Info>
         <Link to="AboutDataset" smooth={true}>
           <ExploreButton>START EXPLORING</ExploreButton>

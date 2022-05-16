@@ -187,6 +187,7 @@ export const HeadContainer = styled.div`
   justify-content: center;
   padding: 40px;
   margin-left: 100px;
+  margin-top: 40px;
   align-items: flex-start;
 `;
 

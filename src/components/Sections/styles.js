@@ -48,3 +48,29 @@ export const Title = styled.p`
 
   cursor: pointer;
 `;
+
+export const ThankuContainer = styled.div`
+  width: 100%;
+  height: 1000px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
+  margin-top: 200px;
+  position: relative;
+`;
+
+export const Thanku = styled.p`
+  font-size: 8rem;
+  color: white;
+  font-weight: bolder;
+`;
+
+export const Image = styled.img`
+  position: absolute;
+  left: -200px;
+  top: -400px;
+  width: 800px;
+  object-fit: cover;
+`;

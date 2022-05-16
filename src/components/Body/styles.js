@@ -21,7 +21,6 @@ export const Card = styled.div`
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 50px 30px;
-  //clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
 `;
 
 export const Title = styled.p`
@@ -31,7 +30,7 @@ export const Title = styled.p`
 `;
 
 export const Text = styled.p`
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #918ca4;
   padding-left: 10px;
   padding-right: 10px;

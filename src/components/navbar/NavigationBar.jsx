@@ -55,7 +55,7 @@ export default function NavigationBar() {
           </Title>
         </TitleContainer>
 
-        <NavLinks>
+        {/* <NavLinks>
           <Link to="BarSection" smooth={true}>
             <SectionLink>Bar Graphs</SectionLink>
           </Link>
@@ -66,7 +66,7 @@ export default function NavigationBar() {
             <SectionLink>Polar Graphs</SectionLink>
           </Link>
         </NavLinks>
-        <div style={{ width: "275px", height: "50" }}></div>
+        <div style={{ width: "275px", height: "50" }}></div> */}
       </div>
     </Navbar>
   );

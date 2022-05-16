@@ -23,7 +23,7 @@ export default function SectionBanner({ onSectionChange }) {
         <Sections>
           {selectedSection === "Section1" ? (
             <SelectedSection animate>
-              <Text>Section 1</Text>
+              <Text>Regions</Text>
             </SelectedSection>
           ) : (
             <Section
@@ -32,12 +32,12 @@ export default function SectionBanner({ onSectionChange }) {
                 onSectionChange("Section1");
               }}
             >
-              <Text>Section 1</Text>
+              <Text>Regions</Text>
             </Section>
           )}
           {selectedSection === "Section2" ? (
             <SelectedSection animate>
-              <Text>Section 2</Text>
+              <Text>Symptoms / Infected</Text>
             </SelectedSection>
           ) : (
             <Section
@@ -46,12 +46,12 @@ export default function SectionBanner({ onSectionChange }) {
                 onSectionChange("Section2");
               }}
             >
-              <Text>Section 2</Text>
+              <Text>Symptoms / Infected</Text>
             </Section>
           )}
           {selectedSection === "Section3" ? (
             <SelectedSection animate>
-              <Text>Section 3</Text>
+              <Text>Risk Mortality / Infection</Text>
             </SelectedSection>
           ) : (
             <Section
@@ -60,12 +60,12 @@ export default function SectionBanner({ onSectionChange }) {
                 onSectionChange("Section3");
               }}
             >
-              <Text>Section 3</Text>
+              <Text>Risk Mortality / Infection</Text>
             </Section>
           )}
           {selectedSection === "Section4" ? (
             <SelectedSection animate>
-              <Text>Section 4</Text>
+              <Text>Disease</Text>
             </SelectedSection>
           ) : (
             <Section
@@ -74,7 +74,7 @@ export default function SectionBanner({ onSectionChange }) {
                 onSectionChange("Section4");
               }}
             >
-              <Text>Section 4</Text>
+              <Text>Disease</Text>
             </Section>
           )}
         </Sections>
