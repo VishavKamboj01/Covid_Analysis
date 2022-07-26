@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Covid_Analysis/static/css/main.e1a28a79.css",
+    "main.js": "/Covid_Analysis/static/js/main.e2bbf4d5.js",
+    "static/js/787.ec704a7a.chunk.js": "/Covid_Analysis/static/js/787.ec704a7a.chunk.js",
+    "static/media/virus.png": "/Covid_Analysis/static/media/virus.82db347ee542e102d721.png",
+    "index.html": "/Covid_Analysis/index.html",
+    "main.e1a28a79.css.map": "/Covid_Analysis/static/css/main.e1a28a79.css.map",
+    "main.e2bbf4d5.js.map": "/Covid_Analysis/static/js/main.e2bbf4d5.js.map",
+    "787.ec704a7a.chunk.js.map": "/Covid_Analysis/static/js/787.ec704a7a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1a28a79.css",
+    "static/js/main.e2bbf4d5.js"
+  ]
+}
