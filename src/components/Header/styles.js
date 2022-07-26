@@ -126,6 +126,11 @@ export const Virus1 = styled.img`
   bottom: 70px;
   animation-name: ${appearFromRightVirus1};
   animation-duration: 2s;
+
+  @media (max-width: 1550px) {
+    right: 30px;
+    width: 500px;
+  }
 `;
 
 export const Virus2 = styled.img`
@@ -136,6 +141,10 @@ export const Virus2 = styled.img`
   top: 120px;
   animation-name: ${appearFromRightVirus2};
   animation-duration: 1.3s;
+
+  @media (max-width: 1550px) {
+    right: 80px;
+  }
 `;
 
 export const Virus3 = styled.img`
@@ -146,6 +155,10 @@ export const Virus3 = styled.img`
   bottom: 200px;
   animation-name: ${appearFromRightVirus3};
   animation-duration: 1.5s;
+
+  @media (max-width: 1550px) {
+    right: 450px;
+  }
 `;
 
 export const Virus4 = styled.img`
@@ -156,6 +169,10 @@ export const Virus4 = styled.img`
   top: 230px;
   animation-name: ${appearFromRightVirus4};
   animation-duration: 1s;
+
+  @media (max-width: 1550px) {
+    right: 300px;
+  }
 `;
 
 export const Virus5 = styled.img`
@@ -166,6 +183,10 @@ export const Virus5 = styled.img`
   top: 350px;
   animation-name: ${appearFromRightVirus5};
   animation-duration: 1.5s;
+
+  @media (max-width: 1550px) {
+    right: 500px;
+  }
 `;
 
 export const Virus6 = styled.img`
@@ -176,6 +197,10 @@ export const Virus6 = styled.img`
   top: 200px;
   animation-name: ${appearFromRightVirus6};
   animation-duration: 1s;
+
+  @media (max-width: 1550px) {
+    right: 450px;
+  }
 `;
 
 export const HeadContainer = styled.div`

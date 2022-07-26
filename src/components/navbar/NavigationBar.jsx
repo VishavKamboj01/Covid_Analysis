@@ -19,10 +19,10 @@ export default function NavigationBar() {
     (e) => {
       const window = e.currentTarget;
       if (y > window.scrollY) {
-        // console.log("scrolling up");
+        console.log("scrolling up");
         setHiddenBar(false);
       } else if (y < window.scrollY) {
-        // console.log("scrolling down");
+        console.log("scrolling down");
         setHiddenBar(true);
       }
       setY(window.scrollY);

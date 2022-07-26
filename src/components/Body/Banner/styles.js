@@ -96,6 +96,16 @@ export const Section = styled.div`
     background: black;
     transition: 0.3s ease;
     clip-path: polygon(6% 10%, 100% 0, 94% 90%, 0% 100%);
+
+    @media (max-width: 1400px) {
+      width: 256px;
+      height: 56px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    width: 260px;
+    height: 60px;
   }
 `;
 
@@ -118,6 +128,11 @@ export const SelectedSection = styled.div`
     rgba(0, 134, 157, 1) 45%,
     rgba(4, 180, 227, 1) 100%
   );
+
+  @media (max-width: 1400px) {
+    width: 260px;
+    height: 60px;
+  }
 `;
 
 export const Text = styled.p`
